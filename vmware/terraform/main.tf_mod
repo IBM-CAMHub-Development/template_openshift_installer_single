@@ -40,10 +40,7 @@ module "deployVM_single" {
   #######
   datacenter    = "${var.datacenter}"
   resource_pool = "${var.resource_pool}"
-
-  # count                 = "${length(var.single_vm_ipv4_address)}"
-  count = "${length(keys(var.single_node_hostname_ip))}"
-
+  
   #######
   // vm_folder = "${module.createFolder.folderPath}"
   enable_vm               = "true"
