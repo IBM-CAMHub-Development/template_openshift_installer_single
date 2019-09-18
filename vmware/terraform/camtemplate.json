@@ -1,5 +1,5 @@
 {
-    "name": "OpenShift Container Platform Single Node Installation",
+    "name": "OpenShift Container Platform Single Node Installation - tf12",
     "description": "This template will deploy an OpenShift Container Platform containing a single master and node on one system (all-in-one configuration)",
     "version": "1.0",
     "imageUrl": "",
@@ -23,7 +23,7 @@
       }
     },
     "metadata": {
-      "displayName": "OpenShift Container Platform Single Node Installation",
+      "displayName": "OpenShift Container Platform Single Node Installation - tf12",
       "providerDisplayName": "VMware vSphere",
       "longDescription": "This template will deploy an OpenShift Container Platform containing a single master and node on one system (all-in-one configuration)",
       "bullets": [{
