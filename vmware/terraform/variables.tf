@@ -1,54 +1,54 @@
 #single Node
 variable "single_node_hostname_ip" {
-  type = "map"
+  type = map(string)
 }
 
 variable "single_node_vcpu" {
-  type    = "string"
+  type = string
 }
 
 variable "single_node_memory" {
-  type    = "string"
+  type = string
 }
 
 variable "single_node_disk1_size" {
-  type = "string"
+  type = string
 }
 
 variable "single_node_disk1_keep_on_remove" {
-  type = "string"
+  type = string
 }
 
 variable "vm_ipv4_gateway" {
-  type = "string"
+  type = string
 }
 
 variable "vm_ipv4_netmask" {
-  type = "string"
+  type = string
 }
 
 variable "vm_domain_name" {
-  type = "string"
+  type = string
 }
 
 variable "network" {
-  type = "string"
+  type = string
 }
 
 variable "adapter_type" {
-  type    = "string"
+  type = string
 }
 
 variable "vm_folder" {
-  type = "string"
+  type = string
 }
 
 variable "dns_servers" {
-  type = "list"
+  type = list(string)
 }
 
 variable "dns_suffixes" {
-  type = "list"
+  type = list(string)
 }
 
 variable "vm_clone_timeout" {
@@ -56,50 +56,51 @@ variable "vm_clone_timeout" {
 }
 
 variable "datacenter" {
-  type = "string"
+  type = string
 }
 
 variable "resource_pool" {
-  type = "string"
+  type = string
 }
 
 variable "vm_image_template" {
-  type = "string"
+  type = string
 }
 
 variable "vm_os_user" {
-  type = "string"
+  type = string
 }
 
 variable "vm_os_password" {
-  type = "string"
+  type = string
 }
 
 variable "datastore" {
-  type = "string"
+  type = string
 }
 
 # SSH KEY Information
 variable "vm_os_private_ssh_key" {
-  type = "string"
+  type = string
 }
 
 variable "vm_os_public_ssh_key" {
-  type = "string"
+  type = string
 }
 
 variable "rh_user" {
-  type = "string"
+  type = string
 }
 
 variable "rh_password" {
-  type = "string"
+  type = string
 }
 
 variable "openshift_user" {
-  type = "string"
+  type = string
 }
 
 variable "openshift_password" {
-  type = "string"
+  type = string
 }
+
