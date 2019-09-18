@@ -35,7 +35,7 @@ resource "null_resource" "create-temp-random-dir" {
 }
 
 module "deployVM_single" {
-  source = "git::https://github.com/IBM-CAMHub-Development/template_openshift_modules.git?ref=3.11//vmware_provision"
+  source = "git::https://github.com/IBM-CAMHub-Development/template_openshift_modules.git//vmware_provision?ref=3.11"
 
   #######
   datacenter    = "${var.datacenter}"
@@ -84,7 +84,7 @@ module "deployVM_single" {
 }
 
 module "host_prepare" {
-  source = "git::https://github.com/IBM-CAMHub-Development/template_openshift_modules.git?ref=3.11//host_prepare"
+  source = "git::https://github.com/IBM-CAMHub-Development/template_openshift_modules.git//host_prepare?ref=3.11"
   
   private_key          = "${length(var.vm_os_private_ssh_key) == 0 ? "${tls_private_key.generate.private_key_pem}" : "${base64decode(var.vm_os_private_ssh_key)}"}"
   vm_os_user           = "${var.vm_os_user}"
@@ -108,7 +108,7 @@ module "host_prepare" {
 }
 
 module "config_inventory_single" {
-  source = "git::https://github.com/IBM-CAMHub-Development/template_openshift_modules.git?ref=3.11//config_inventory_single"
+  source = "git::https://github.com/IBM-CAMHub-Development/template_openshift_modules.git//config_inventory_single?ref=3.11"
   
   private_key          = "${length(var.vm_os_private_ssh_key) == 0 ? "${tls_private_key.generate.private_key_pem}" : "${base64decode(var.vm_os_private_ssh_key)}"}"
   vm_os_user           = "${var.vm_os_user}"
@@ -131,7 +131,7 @@ module "config_inventory_single" {
 }
 
 module "run_installer" {
-  source = "git::https://github.com/IBM-CAMHub-Development/template_openshift_modules.git?ref=3.11//run_installer"
+  source = "git::https://github.com/IBM-CAMHub-Development/template_openshift_modules.git//run_installer?ref=3.11"
   
   private_key         = "${length(var.vm_os_private_ssh_key) == 0 ? "${tls_private_key.generate.private_key_pem}" : "${base64decode(var.vm_os_private_ssh_key)}"}"
   vm_os_user          = "${var.vm_os_user}"
